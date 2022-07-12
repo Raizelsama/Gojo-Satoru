@@ -150,11 +150,21 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
 
 ⭐✑ Description: ${metadata.desc}
 
-⭐✑ Welcome To Our Comfortable Happy😋, Sometimes Loud😜, Usually Messy🤥, Full Of Love🥰, HOME😌!!`} )
+⭐✑ *مرحبـــــــاً بك في بيتك الثاني*
+*يا مرحبا نورتنا بقدومك*
+*نتمنى ان تستمتع معنا*
+*المهم منور/ة*😝!`} )
                 } else if (anu.action == 'remove') {
-                    GojoMdNx.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `⭐✑ @${num.split("@")[0]} Left ${metadata.subject}
+                    GojoMdNx.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `⭐✑ @${num.split("@")[0]} غـادر ${metadata.subject}
 
-⭐✑ I'm Not Sure If It Was A Goodbye Charm, But It Was Fun While It Lasted 😌✨` })
+⭐✑ *لا اعلم هل اقول لك وداعاً ام لا*
+
+*هل كنت متفاعلاً ام لا*
+
+*لقد غادرت قلبي قبل القروب*
+
+*تطلع يجي غيرك*
+🐤` })
                 }
             }
         } catch (err) {
