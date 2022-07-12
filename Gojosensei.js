@@ -1454,9 +1454,9 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-let teks = `╚»˙·٠•●♥ Tag All ♥●•٠·˙«╝ 
+let teks = `╚»˙·٠•●♥ منشن جماعي ♥●•٠·˙«╝ 
  
- ➲ *Message : ${q ? q : 'no message'}*\n\n`
+ ➲ *الموضوع : ${q ? q : 'no message'}*\n\n`
                 for (let mem of participants) {
                 teks += `🐦 @${mem.id.split('@')[0]}\n`
                 }
