@@ -22,7 +22,7 @@ global.APIKeys = {
 global.owner = ['+967770500831']
 global.premium = ['+967770500831']
 global.ownernomer = '+967770500831'
-global.ownername = '🐦Star Boy Nexus'
+global.ownername = '✦〘𝐁.𝐎.𝐓_⌠🔱⌡_𝐑𝐀𝐈𝐙𝐄𝐋〙✦'
 global.botname = 'RAIZEL_SAMA'
 global.footer = '©NexusNwInc.'
 global.ig = 'https://github.com/nexusNw'
@@ -42,7 +42,7 @@ global.mess = {
     group: 'هذه الميزات تعمل بالقروبات فقط !',
     private: 'لا تعمل هذه الميزات الا بالدردشات الخاصه!',
     bot: 'This Feature Is Only For Bot',
-    wait: 'يرجى الإنتظـــار',
+    wait: 'يرجى الإنتظـــار',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 1000 Hours',
 }
