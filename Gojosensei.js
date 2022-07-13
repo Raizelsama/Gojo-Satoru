@@ -1246,35 +1246,35 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
 					GojoMdNx.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
                     case 'stupid':
-      case 'foolish':
-      case 'smart':
+      case 'حمار':
+      case 'ذكي':
       case 'idiot':
-      case 'gay':
+      case 'قي':
       case 'lesbi':
       case 'bastard':
       case 'stubble':
-      case 'dog':
-      case 'fuck':
+      case 'كلب':
+      case 'ورع':
       case 'ape':
-      case 'noob':
-      case 'great':
+      case 'صنم':
+      case 'جلاد':
       case 'horny':
-      case 'wibu':
+      case 'اهبل':
       case 'asshole':
-      case 'handsome':
-      case 'beautiful':
-      case 'cute':
-      case 'kind':
-      case 'ugly':
+      case 'باكا':
+      case 'جميل':
+      case 'بقره':
+      case 'احمق':
+      case 'طفل':
       case 'pretty':
       case 'lesbian':
-      case 'randi':
+      case 'غبي':
       case 'gandu':
-      case 'madarchod':
+      case 'قرد':
       case 'kala':
       case 'gora':
       case 'chutiya':
-      case 'nibba':
+      case 'صديق':
       case 'nibbi':
       case 'bhosdiwala':
       case 'chutmarika':
@@ -1305,7 +1305,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `The Most *${command}* Here Is @${jodoh.split('@')[0]}`
+            let jawab = `اكبر *${command}* في القروب @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
                         { buttonId: '👀', buttonText: { displayText: '👀😂' }, type: 1 }
