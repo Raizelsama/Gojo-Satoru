@@ -220,7 +220,7 @@ const reply = (teks) => {
             console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
         }
 	
-	//reset limit every 1000 hours\\
+	//reset limit every 12 hours\\
         let cron = require('node-cron')
         cron.schedule('00 12 * * *', () => {
             let user = Object.keys(global.db.data.users)
@@ -1146,19 +1146,18 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'زوجني': {
+            case 'زوجنيزوجني : {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `「مبروك واعتبره/ا زوجك/تك 🤡」◣
 
-@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
+@${me.split( @ )[0]} ❤️ @${jodoh.split( @ )[0]}
 「اضغط اقبل اذا موافق 😂🤡」◣`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '「اقبل🤗」◣', buttonText: { displayText: '「اقبل🤗」◣' }, type: 1 }
-                    ]
+                        { buttonId:  「اقبل🤗」◣ , buttonText: { displayText:  「اقبل🤗」◣  }, type: 1 }
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
@@ -1168,11 +1167,10 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-	    「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣
-	    「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣`
+زوجناكم لأنكم تناسبو بعض❤️💖👀`
             let menst = [orang, jodoh]
             let buttons = [
-                        { buttonId: '「 يب هم مناسبين لبعض😂🤡 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
+                        { buttonId: '❤️اتفق', buttonText: { displayText: 'مبروك♥' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
             }
@@ -1247,56 +1245,57 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
 					const taky = xeony[Math.floor(Math.random() * xeony.length)]
 					GojoMdNx.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
-                    case 'جبان':
-      case 'غبي':
-      case 'حمار':
-      case 'ذكي':
-      case 'منحرف':
-      case 'محبوب':
-      case 'كلب':
-      case 'احمق':
-      case 'قرد':
-      case 'كريه':
-      case 'مكروه':
-      case 'خروف':
-      case 'سافل':
-      case 'ورع':
-      case 'مخادع':
-      case 'مظلوم':
-      case 'مسكين':
-      case 'مخدوع':
-      case 'جميل':
-      case 'طيب':
-      case 'محترم':
-      case 'زفت':
-      case 'وصخ':
-      case 'حزين':
-      case 'مجنون':
-      case 'بشع':
-      case 'صنم':
-      case 'شجاع':
-      case 'رقاص':
-      case 'مضحك':
-      case 'مستفز':
-      case 'عاقل':
-      case 'محتال':
-      case 'نجس':
-      case 'مؤدب':
-      case 'غامض':
-      case 'ظالم':	
-      case 'مبااع':
-      case 'صادق':
-      case 'كذاب': {
+                                 case  جبان :
+      case  غبي :
+      case  حمار :
+      case  ذكي :
+      case  منحرف :
+      case  محبوب :
+      case  كلب :
+      case  احمق :
+      case  قرد :
+      case  كريه :
+      case  مكروه :
+      case  خروف :
+      case  سافل :
+      case  ورع :
+      case  مخادع :
+      case  مظلوم :
+      case  مسكين :
+      case  مخدوع :
+      case  جميل :
+      case  طيب :
+      case  محترم :
+      case  زفت :
+      case  وصخ :
+      case  حزين :
+      case  مجنون :
+      case  بشع :
+      case  صنم :
+      case  شجاع :
+      case  رقاص :
+      case  مضحك :
+      case  مستفز :
+      case  عاقل :
+      case  محتال :
+      case  نجس :
+      case  مؤدب :
+      case  غامض :
+      case  ظالم :	
+      case  مبااع :
+      case  صادق :
+      case  كذاب : {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
+            let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split( @ )[0]} 」◣
 	    「 صح؟ 🥲 」◣`
             let ments = [me, jodoh]
             let buttons = [
-                        { buttonId: '「 يب 😂 」◣', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
+                        { buttonId:  「 يب 😂 」◣ , buttonText: { displayText:  「 يب 😂 」◣  }, type: 1 }
                     ]
+
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
@@ -1334,7 +1333,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 GojoMdNx.sendMessage(m.chat, reactionMessage)
             }
             break  
-            case 'انضم': {
+            case 'join': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Enter The Group Link!`)
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return replay(`Invalid Link!`)
@@ -1343,14 +1342,14 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 await GojoMdNx.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
-            case 'غادر': {
+            case 'leave': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 await GojoMdNx.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
             }
             break
-            case 'تغيير.حقوق': {
+            case 'setexif': {
                if (!isCreator) return replay(`${mess.owner}`)
-               if (!text) return replay(`Example : ${prefix + command} اسم الحزمة|صاحب الحزمة`)
+               if (!text) return replay(`Example : ${prefix + command} packname|author`)
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
           reply(`Exif Has Been Successfully Changed to\n\n🐦 Packname : ${global.packname}\n🐦 Author : ${global.author}`)
@@ -1372,7 +1371,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'ترقية': {
+	case 'ترقيه': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1380,7 +1379,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	case 'تخفيض': {
+	case 'اقاله': {
 		if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
@@ -1388,35 +1387,35 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'حظر': {
+        case 'block': {
 		if (!isCreator) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'الغاء.حظر': {
+        case 'unblock': {
 		if (!isCreator) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	    case 'تغيير اسم': case 'setgcname': case 'setsubject': {
+	    case 'setname': case 'setgcname': case 'setsubject': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
-                if (!text) replay(`اكتب الاسم الي تبي تحطه ل الجروب`)
+                if (!text) replay(`Where Is The Text?`)
                 await GojoMdNx.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-          case 'الوصف': case 'تغيير.الوصف': {
+          case 'setdesc': case 'setdesk': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
-                if (!text) replay(`مثال : تغيير.الوصف | مرحبا`)
+                if (!text) replay(`Where Is The Text?`)
                 await GojoMdNx.groupUpdateDescription(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-	case 'حطها.خلفيتك': case ``: {
+          case 'setbotpp': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
                 if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
@@ -1426,7 +1425,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 reply(mess.success)
                 }
                 break
-           case 'غير صورة جروب': case 'تغيير صورة الجروب': case 'حطها.صورة.الجروب': {
+           case 'setgrouppp': case 'setgruppp': case 'setgcpp': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
@@ -1437,20 +1436,20 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 reply(mess.success)
                 }
                 break
-	case 'المنشن': case `منشن`: {
+            case  المنشن : case `منشن`: {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
 let teks = `「المنشن الجماعي」◣
  
- ➲ *${q ? q : 'اصحو من النوم'}*\n\n`
+ ➲ *الموضوع : ${q ? q : 'لا يوجد موضوع'}*\n\n`
                 for (let mem of participants) {
-                teks += `👤 @${mem.id.split('@')[0]}\n`
+                teks += `🐦 @${mem.id.split('@')[0]}\n`
                 }
                 GojoMdNx.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
                 break
-	case 'منشن.مخفي': case `المنشن.المخفي` : {
+                case 'hidetag': {
             if (!m.isGroup) return replay(`${mess.group}`)
             if (!isBotAdmins) return replay(`${mess.botAdmin}`)
             if (!isAdmins) return replay(`${mess.admin}`)
@@ -1632,38 +1631,38 @@ break
             reply('Successfully Deleted The Vote Session In This Group')
 	    }
             break
-               case 'الجروب': case 'جروب': {
+               case 'group': case 'grup': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
                 if (args[0] === 'close'){
-                    await GojoMdNx.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`تم غلق المجموعة`)).catch((err) => reply(jsonformat(err)))
+                    await GojoMdNx.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Successful Closing The Group`)).catch((err) => reply(jsonformat(err)))
                 } else if (args[0] === 'open'){
-                    await GojoMdNx.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`اصبحت المجموعة عامة`)).catch((err) => reply(jsonformat(err)))
+                    await GojoMdNx.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
-                        { buttonId: 'group open', buttonText: { displayText: 'نعم' }, type: 1 },
-                        { buttonId: 'group close', buttonText: { displayText: 'لا' }, type: 1 }
+                        { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
+                        { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `هل ترغب ب اغلاق الجروب؟؟`, GojoMdNx.user.name, m)
+                    await GojoMdNx.sendButtonText(m.chat, buttons, `Group Mode`, GojoMdNx.user.name, m)
 
              }
             }
             break
-	case 'تعديل': case 'التعديل': {
+            case 'editinfo': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
              if (args[0] === 'open'){
-                await GojoMdNx.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`مسموح لأي احد ب التعديل ف اعدادات المجموعة`)).catch((err) => reply(jsonformat(err)))
+                await GojoMdNx.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Successfully Opened Edit Group Info`)).catch((err) => reply(jsonformat(err)))
              } else if (args[0] === 'close'){
-                await GojoMdNx.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`مسموح فقط للمشرفين ل تعديل ف الاعدادات`)).catch((err) => reply(jsonformat(err)))
+                await GojoMdNx.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Successfully Closed Edit Group Info`)).catch((err) => reply(jsonformat(err)))
              } else {
              let buttons = [
-                        { buttonId: 'نعم', buttonText: { displayText: 'نعم' }, type: 1 },
-                        { buttonId: 'لا', buttonText: { displayText: 'لا' }, type: 1 }
+                        { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
+                        { buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `ان كنت ترغب بأن تكون اعدادات المجموعة عامة اضغط نعم وان كنت ترغب بأن تكون خاصة اضغط لا`, GojoMdNx.user.name, m)
+                    await GojoMdNx.sendButtonText(m.chat, buttons, `Mode Edit Info`, GojoMdNx.user.name, m)
 
             }
             }
@@ -1710,7 +1709,7 @@ break
                 }
              }
              break
-            case 'الرابط': case 'رابط.الجروب': case 'gclink': case 'grouplink': {
+            case 'linkgroup': case 'linkgc': case 'gclink': case 'grouplink': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 let response = await GojoMdNx.groupInviteCode(m.chat)
                 GojoMdNx.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\n${groupMetadata.subject} Group Link`, m, { detectLink: true })
@@ -1728,81 +1727,81 @@ break
                 }
             }
             break
-            case 'حذف': case 'احذف': {
+            case 'احذف': case 'حذف': {
                 if (!m.quoted) reply(false)
                 let { chat, fromMe, id, isBaileys } = m.quoted
                 if (!isBaileys) return replay(`The Message Was Not Sent By A Bot!`)
                 GojoMdNx.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-            case 'رسالة.جروبات': case 'رسالة.جماعية.الجروبات': {
+            case 'bcgc': case 'bcgroup': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Nexus Handsome`)
                 let getGroups = await GojoMdNx.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                 let anu = groups.map(v => v.id)
-                reply(`「 انتظر شوي ... 」◣`)
+                reply(`Sent Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} Seconds`)
                 for (let i of anu) {
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: '「 رابط الاستقبال 」「📌」◣',
+                                    displayText: 'Script🔖',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
+                                    displayText: 'YouTube📍',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '「 القائمة 」「🗒️」◣',
-                                    id: 'اوامر'
+                                    displayText: '🎀Menu🎀',
+                                    id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '「 المالك 」「👤」◣',
+                                    displayText: '👤Owner👤',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
+                      let txt = `「 GOJO-SATORU HERE🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
-                reply(`「 تم  ✌ 」◣`)
+                reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
             }
             break
-            case 'رسالة.جماعية': case 'رسالة.جماعية.الكل': case 'bcall': {
+            case 'bc': case 'broadcast': case 'bcall': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!text) return replay(`Where Is The Text?\n\nExample : ${prefix + command} Nexus`)
                 let anu = await store.chats.all().map(v => v.id)
-                reply(`「 سيتم الأرسال بعد قليل ..」◣`)
+                reply(`Send Broadcast To ${anu.length} Chat\nFinish Time ${anu.length * 1.5} Seconds`)
 		for (let yoi of anu) {
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: '「 رابط الاستقبال 」「📌」◣',
+                                    displayText: 'Script🔖',
                                     url: `${sc}`
                                 }
                             }, {
                                 urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣', 
+                                    displayText: 'YouTube📍',
                                     url: `${myweb}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '「 القائمة 」「🗒️」◣',
-                                    id: 'الاوامر'
+                                    displayText: '🎀Menu🎀',
+                                    id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '「 المالك 」「👤」◣',
+                                    displayText: '👤المالك',
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
+                      let txt = `「 GOJO-SATORU HERE 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
-		reply('「 تم 🤗 」◣')
+		reply('Broadcast Success')
             }
             break
             case 'chatinfo': case 'infochat': {
@@ -1847,13 +1846,13 @@ break
                  GojoMdNx.sendTextWithMentions(m.chat, teks, m)
              }
              break
-             case 'قائمة المتصلين': case 'المتصلين': {
+             case 'المتصلين': case 'onlinelistxxx': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
-                    GojoMdNx.sendText(m.chat, '「 الموجودين الأن 」◣\n\n' + online.map(v => '👤 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    GojoMdNx.sendText(m.chat, 'Online List:\n\n' + online.map(v => '🐦 @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
-            case 'ملصق': case 's': case 'ستيكر': case 'س': {
+            case  ملصق : case  s : case  ستيكر : case  س : {
             if (!quoted) return replay(`Reply Video/Image With Caption ${prefix + command}`)
             reply(mess.wait)
                     if (/image/.test(mime)) {
@@ -1909,9 +1908,9 @@ break
 		}
 	    }
 	    break
-            case 'لصورة': case '1اعلا': {
+            case 'toimage': case 'toimg': {
                 if (!quoted) return reply(`Reply Image`)
-                if (!/webp/.test(mime)) reply(`منشن على ستيكر واكتب  *${prefix + command}*`)
+                if (!/webp/.test(mime)) reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
                 let media = await GojoMdNx.downloadAndSaveMediaMessage(quoted)
                 let ran = await getRandom('.png')
@@ -1924,7 +1923,7 @@ break
                 })
             }
             break
-	        case 'الى فيديو': case 'لفيديو': {
+	        case 'tomp4': case 'tovideo': {
                 if (!quoted) reply(`Reply Image`)
                 if (!/webp/.test(mime)) return replay(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -1935,7 +1934,7 @@ break
                 await fs.unlinkSync(media)
             }
             break
-            case 'الى صوتية': case 'لصوتية': {
+            case 'toaud': case 'toaudio': {
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
             if (!quoted) return reply(`Send/Reply Video/Audio You Want To Convert To Audio With Caption ${prefix + command}`)
             reply(mess.wait)
@@ -1945,7 +1944,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
             }
             break
-            case 'لمقطع.صوتي': {
+            case 'tomp3': {
             if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want to Convert Into MP3 With Caption ${prefix + command}`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replay(`Send/Reply Video/Audio You Want To Convert into MP3 With Caption ${prefix + command}`)
             if (!quoted) return replay(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
@@ -1966,7 +1965,7 @@ break
             GojoMdNx.sendMessage(m.chat, {audio: audio, mimetype:'audio/mpeg', ptt:true }, {quoted:m})
             }
             break
-            case 'لجيف': {
+            case 'togif': {
                 if (!quoted) return reply(`Reply Image`)
                 if (!/webp/.test(mime)) return reply(`Reply Sticker With Caption *${prefix + command}*`)
                 reply(mess.wait)
@@ -2042,18 +2041,20 @@ break
                 })
                 }
                 break
-        case 'image': case 'صورة': {
+        case 'gimage': case 'googleimage': {
         if (!text) return reply(`Example : ${prefix + command} gojo`)
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
         n = result
         images = n[Math.floor(Math.random() * n.length)].url
         let buttons = [
-                    {buttonId: `image ${text}`, buttonText: {displayText: '「 التالي 」◣'}, type: 1}
+                    {buttonId: `gimage ${text}`, buttonText: {displayText: '➡️➡️الصورة التالية➡️➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: images },
-                    caption: ` `,
+                    caption: `*-------「 GIMAGE SEARCH 」-------*
+🤠 *Query* : ${text}
+🔗 *Media Url* : ${images}`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2062,23 +2063,22 @@ break
         })
         }
         break
-	    case 'play': case 'فيديو': case 'ytplay': {
-                if (!text) return reply(`Example : ${prefix + command} غوجو ساتورو`)
+	    case 'play': case 'song': case 'ytplay': {
+                if (!text) return reply(`Example : ${prefix + command} Stay`)
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
                 let buttons = [
-                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶مقطع صوتي🎶'}, type: 1},
+                    {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: '🎶موسيقي🎶'}, type: 1},
                     {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: '📽️فيديو📽️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-: ${anu.title}
-「 مدة المقطع 」◣ : ${anu.timestamp}
+
 「 عدد المشاهدات 」◣: ${anu.views}
 「 تم تحميله 」◣ : ${anu.ago}
-「 الوصف」◣ : ${anu.description}`,
+「 الوصف」◣ : ${anu.description}
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2092,7 +2092,7 @@ break
                 let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, ` `, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '320kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2102,7 +2102,7 @@ break
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `: ${media.title}\n\n ${args[1] || '360p'}` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${isUrl(text)}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 	    case 'getmusicxxx': {
@@ -2111,7 +2111,7 @@ break
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return reply('File Over Limit '+util.format(media))
-                GojoMdNx.sendImage(m.chat, media.thumb, `العنوان : ${media.title}\nحجم الملف : ${media.filesizeF}\nالرابط : ${urls[text - 1]}\nاضافة : MP3\nالجودة : ${args[1] || '128kbps'}`, m)
+                GojoMdNx.sendImage(m.chat, media.thumb, `🐦 Title : ${media.title}\n🐦 File Size : ${media.filesizeF}\n🐦 Url : ${urls[text - 1]}\n🐦 Ext : MP3\n🐦 Resolution : ${args[1] || '128kbps'}`, m)
                 GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2338,21 +2338,21 @@ break
                 GojoMdNx.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generated Random ' + command }, { quoted: m })
             }
             break
-	    case 'تطقيم':  case 'طقم': {
+	    case 'couplepp':  case 'ppcouple': {
                 reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
                 let random = anu[Math.floor(Math.random() * anu.length)]
-                GojoMdNx.sendMessage(m.chat, { image: { url: random.male }, caption: `「 ولد 」「👦🏻」◣`}, { quoted: m })
-                GojoMdNx.sendMessage(m.chat, { image: { url: random.female }, caption: `「 بنت 」「👧🏻」◣` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male🙎🏻‍♂️` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female🙎🏻‍♀️` }, { quoted: m })
             }
 	    break
-            case 'قهوة': case 'شاي': {
+            case 'coffee': case 'kopi': {
             let buttons = [
-                    {buttonId: `شاي`, buttonText: {displayText: '➡️'}, type: 1}
+                    {buttonId: `coffe`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: `☕`,
+                    caption: `☕ Random Coffee`,
                     footer: GojoMdNx.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -2456,1746 +2456,4 @@ break
             break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
                 if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
-                let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
-                let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Your Name :* ${anu.message.nama_anda.nama}\n🐦 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐦 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐦 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'suamiistri': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
-                let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
-                let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Husband's Name :* ${anu.message.suami.nama}\n🐦 *Husband Born :* ${anu.message.suami.tgl_lahir}\n🐦 *Wife's Name :* ${anu.message.istri.nama}\n🐦 *Born Wife :* ${anu.message.istri.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'ramalancinta': case 'ramalcinta': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
-                let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
-                let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Your Name :* ${anu.message.nama_anda.nama}\n🐦 *Your Birth :* ${anu.message.nama_anda.tgl_lahir}\n🐦 *Couple Name :* ${anu.message.nama_pasangan.nama}\n🐦 *Born Couple :* ${anu.message.nama_pasangan.tgl_lahir}\n🐦 *Positive Side :* ${anu.message.sisi_positif}\n🐦 *Negative Side :* ${anu.message.sisi_negatif}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'artinama': {
-                if (!text) throw `Example : ${prefix + command} Dika Ardianta`
-                let anu = await primbon.arti_nama(text)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Meaning :* ${anu.message.arti}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'kecocokannama': case 'cocoknama': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
-                let [nama, tgl, bln, thn] = text.split`,`
-                let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Life Path :* ${anu.message.life_path}\n🐦 *Destiny :* ${anu.message.destiny}\n🐦 *Destiny Desire :* ${anu.message.destiny_desire}\n🐦 *Personality :* ${anu.message.personality}\n🐦 *Percentage :* ${anu.message.persentase_kecocokan}`, m)
-            }
-            break
-            case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
-                if (!text) throw `Example : ${prefix + command} Dika|Novia`
-                let [nama1, nama2] = text.split`|`
-                let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendImage(m.chat,  anu.message.gambar, `🐦 *Your Name :* ${anu.message.nama_anda}\n🐦 *Couple Name :* ${anu.message.nama_pasangan}\n🐦 *Positive Side :* ${anu.message.sisi_positif}\n🐦 *Negative Side :* ${anu.message.sisi_negatif}`, m)
-            }
-            break
-            case 'jadianpernikahan': case 'jadiannikah': {
-                if (!text) throw `Example : ${prefix + command} 6, 12, 2020`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.tanggal_jadian_pernikahan(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Wedding Date :* ${anu.message.tanggal}\n🐦 *Characteristics :* ${anu.message.karakteristik}`, m)
-            }
-            break
-            case 'sifatusaha': {
-                if (!ext)throw `Example : ${prefix+ command} 28, 12, 2021`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.hari_lahir}\n🐦 *Business :* ${anu.message.usaha}`, m)
-            }
-            break
-            case 'rejeki': case 'rezeki': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.rejeki_hoki_weton(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.hari_lahir}\n🐦 *Sustenance :* ${anu.message.rejeki}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'pekerjaan': case 'kerja': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.pekerjaan_weton_lahir(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.hari_lahir}\n🐦 *Profession :* ${anu.message.pekerjaan}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'ramalannasib': case 'ramalnasib': case 'nasib': {
-                if (!text) throw `Example : 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.ramalan_nasib(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Analysis :* ${anu.message.analisa}\n🐦 *Root Number :* ${anu.message.angka_akar}\n🐦 *Nature :* ${anu.message.sifat}\n🐦 *Element :* ${anu.message.elemen}\n🐦 *Lucky Numbers :* ${anu.message.angka_keberuntungan}`, m)
-            }
-            break
-            case 'potensipenyakit': case 'penyakit': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.cek_potensi_penyakit(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Analysis :* ${anu.message.analisa}\n🐦 *Sector :* ${anu.message.sektor}\n?? *Element :* ${anu.message.elemen}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'artitarot': case 'tarot': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.arti_kartu_tarot(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendImage(m.chat, anu.message.image, `🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Tarot Symbol :* ${anu.message.simbol_tarot}\n🐦 *Meaning :* ${anu.message.arti}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'fengshui': {
-                if (!text) throw `Example : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Name, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
-                let [nama, gender, tahun] = text.split`,`
-                let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tahun_lahir}\n🐦 *Gender :* ${anu.message.jenis_kelamin}\n🐦 *Kua Number :* ${anu.message.angka_kua}\n🐦 *Group :* ${anu.message.kelompok}\n🐦 *Character :* ${anu.message.karakter}\n🐦 *Good Sector :* ${anu.message.sektor_baik}\n🐦 *Bad Sector :* ${anu.message.sektor_buruk}`, m)
-            }
-            break
-            case 'haribaik': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.petung_hari_baik(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *When Challenged :* ${anu.message.kala_tinantang}\n🐦 *Info :* ${anu.message.info}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'harisangar': case 'taliwangke': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.hari_sangar_taliwangke(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Results :* ${anu.message.result}\n🐦 *Info :* ${anu.message.info}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'harinaas': case 'harisial': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.primbon_hari_naas(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Day Of Birth :* ${anu.message.hari_lahir}\n🐦 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐦 *Fateful Day :* ${anu.message.hari_naas}\n🐦 *Info :* ${anu.message.catatan}\n🐦 *Notes :* ${anu.message.info}`, m)
-            }
-            break
-            case 'nagahari': case 'harinaga': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.rahasia_naga_hari(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Day Of Birth :* ${anu.message.hari_lahir}\n🐦 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐦 *Dragon Day Direction :* ${anu.message.arah_naga_hari}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'arahrejeki': case 'arahrezeki': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.primbon_arah_rejeki(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Day Of Birth :* ${anu.message.hari_lahir}\n🐦 *Date Of Birth :* ${anu.message.tgl_lahir}\n🐦 *Sustenance Direction :* ${anu.message.arah_rejeki}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'peruntungan': {
-                if (!text) throw `Example : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Name, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
-                let [nama, tgl, bln, thn, untuk] = text.split`,`
-                let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Fortune Of The Year :* ${anu.message.peruntungan_tahun}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'weton': case 'wetonjawa': {
-                if (!text) throw `Example : ${prefix + command} 7, 7, 2005`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.weton_jawa(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Date :* ${anu.message.tanggal}\n🐦 *Number Of Neptune :* ${anu.message.jumlah_neptu}\n🐦 *Day Character :* ${anu.message.watak_hari}\n🐦 *Dragon Day :* ${anu.message.naga_hari}\n🐦 *Good Hour :* ${anu.message.jam_baik}\n🐦 *Birth Character :* ${anu.message.watak_kelahiran}`, m)
-            }
-            break
-            case 'sifat': case 'karakter': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
-                let [nama, tgl, bln, thn] = text.split`,`
-                let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Lifeline :* ${anu.message.garis_hidup}`, m)
-            }
-            break
-            case 'keberuntungan': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
-                let [nama, tgl, bln, thn] = text.split`,`
-                let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Name :* ${anu.message.nama}\n🐦 *Born :* ${anu.message.tgl_lahir}\n🐦 *Results :* ${anu.message.result}`, m)
-            }
-            break
-            case 'memancing': {
-                if (!text) throw `Example : ${prefix + command} 12, 1, 2022`
-                let [tgl, bln, thn] = text.split`,`
-                let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Date :* ${anu.message.tgl_memancing}\n🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'masasubur': {
-                if (!text) throw `Example : ${prefix + command} 12, 1, 2022, 28\n\nNote : ${prefix + command} First Day Of Menstruation Cycle`
-                let [tgl, bln, thn, siklus] = text.split`,`
-                let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Results :* ${anu.message.result}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'zodiak': case 'zodiac': {
-                if (!text) throw `Example : ${prefix+ command} 7 7 2005`
-                let zodiak = [
-                    ["capricorn", new Date(1970, 0, 1)],
-                    ["aquarius", new Date(1970, 0, 20)],
-                    ["pisces", new Date(1970, 1, 19)],
-                    ["aries", new Date(1970, 2, 21)],
-                    ["taurus", new Date(1970, 3, 21)],
-                    ["gemini", new Date(1970, 4, 21)],
-                    ["cancer", new Date(1970, 5, 22)],
-                    ["leo", new Date(1970, 6, 23)],
-                    ["virgo", new Date(1970, 7, 23)],
-                    ["libra", new Date(1970, 8, 23)],
-                    ["scorpio", new Date(1970, 9, 23)],
-                    ["sagittarius", new Date(1970, 10, 22)],
-                    ["capricorn", new Date(1970, 11, 22)]
-                ].reverse()
-
-                function getZodiac(month, day) {
-                    let d = new Date(1970, month - 1, day)
-                    return zodiak.find(([_,_d]) => d >= _d)[0]
-                }
-                let date = new Date(text)
-                if (date == 'Invalid Date') throw date
-                let d = new Date()
-                let [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
-                let birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
-
-                let zodiac = await getZodiac(birth[1], birth[2])
-                
-                let anu = await primbon.zodiak(zodiac)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Zodiac :* ${anu.message.zodiak}\n🐦 *Number :* ${anu.message.nomor_keberuntungan}\n🐦 *Aroma :* ${anu.message.aroma_keberuntungan}\n🐦 *Planet :* ${anu.message.planet_yang_mengitari}\n🐦 *Flower :* ${anu.message.bunga_keberuntungan}\n🐦 *Color :* ${anu.message.warna_keberuntungan}\n🐦 *Stone :* ${anu.message.batu_keberuntungan}\n🐦 *Element :* ${anu.message.elemen_keberuntungan}\n🐦 *Zodiac Couple :* ${anu.message.pasangan_zodiak}\n🐦 *Notes :* ${anu.message.catatan}`, m)
-            }
-            break
-            case 'shio': {
-                if (!text) throw `Example : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`
-                let anu = await primbon.shio(text)
-                if (anu.status == false) return reply(anu.message)
-                GojoMdNx.sendText(m.chat, `🐦 *Results :* ${anu.message}`, m)
-            }
-            break
-	    case 'stalker': case 'stalk': {
-		if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply('Your Daily Limit Has Expired')
-                if (!text) return reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
-                let [type, id, zone] = args
-                if (type.toLowerCase() == 'ff') {
-                    if (!id) return reply(`No Query id, Example ${prefix + command} ff 552992060`)
-                    let anu = await fetchJson(api('zenz', '/api/nickff', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return reply(anu.result.message)
-                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
-                } else if (type.toLowerCase() == 'ml') {
-                    if (!id) return reply(`No Query id, Example : ${prefix + command} ml 214885010 2253`)
-                    if (!zone) return reply(`No Query id, Example : ${prefix + command} ml 214885010 2253`)
-                    let anu = await fetchJson(api('zenz', '/api/nickml', { apikey: global.APIKeys[global.APIs['zenz']], query: id, query2: zone }))
-                    if (anu.status == false) return reply(anu.result.message)
-                    reply(`ID : ${anu.result.gameId}\nZone : ${anu.result.zoneId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
-                } else if (type.toLowerCase() == 'aov') {
-                    if (!id) return reply(`No Query id, Example ${prefix + command} aov 293306941441181`)
-                    let anu = await fetchJson(api('zenz', '/api/nickaov', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return reply(anu.result.message)
-                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
-                } else if (type.toLowerCase() == 'cod') {
-                    if (!id) return reply(`No Query id, Example ${prefix + command} cod 6290150021186841472`)
-                    let anu = await fetchJson(api('zenz', '/api/nickcod', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return reply(anu.result.message)
-                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
-                } else if (type.toLowerCase() == 'pb') {
-                    if (!id) return reply(`No Query id, Example ${prefix + command} pb riio46`)
-                    let anu = await fetchJson(api('zenz', '/api/nickpb', { apikey: global.APIKeys[global.APIs['zenz']], query: id }))
-                    if (anu.status == false) return reply(anu.result.message)
-                    reply(`ID : ${anu.result.gameId}\nUsername : ${anu.result.userName}`)
-		    db.data.users[m.sender].limit -= 1
-                } else if (type.toLowerCase() == 'ig') {
-                    if (!id) return reply(`No Query username, Example : ${prefix + command} ig josephxeon13`)
-                    let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
-                    if (anu.status == false) return reply(anu.result.message)
-                    GojoMdNx.sendMedia(m.chat, anu.caption.profile_hd, '', `🐦 Full Name : ${anu.caption.full_name}\n🐦 User Name : ${anu.caption.user_name}\n🐦 ID ${anu.caption.user_id}\n🐦 Following : ${anu.caption.followers}\n🐦 Followers : ${anu.caption.following}\n🐦 Bussines : ${anu.caption.bussines}\n🐦 Professional : ${anu.caption.profesional}\n🐦 Verified : ${anu.caption.verified}\n🐦 Private : ${anu.caption.private}\n🐦 Bio : ${anu.caption.biography}\n🐦 Bio Url : ${anu.caption.bio_url}`, m)
-		    db.data.users[m.sender].limit -= 1
-                } else if (type.toLowerCase() == 'npm') {
-                    if (!id) return reply(`No Query username, Example : ${prefix + command} npm scrape-primbon`)
-                    let { result: anu } = await fetchJson(api('zenz', '/api/stalker/npm', { query: id }, 'apikey'))
-                    if (anu.status == false) return reply(anu.result.message)
-                    reply(`🐦 Name : ${anu.name}\n🐦 Version : ${Object.keys(anu.versions)}\n🐦 Created : ${tanggal(anu.time.created)}\n🐦 Modified : ${tanggal(anu.time.modified)}\n🐦 Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n🐦 Description : ${anu.description}\n🐦 Homepage : ${anu.homepage}\n🐦 Keywords : ${anu.keywords}\n🐦 Author : ${anu.author.name}\n🐦 License : ${anu.license}\n🐦 Readme : ${anu.readme}`)
-		    db.data.users[m.sender].limit -= 1
-                } else {
-                    reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
-                }
-            }
-            break
-	        case 'tiktokd': case 'tiktoknowmx': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '🥬With Watermark🥬'}, type: 1},
-                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '🎵Audio🎵'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.nowatermark },
-                    caption: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-            case 'tiktokwmx': case 'tiktokwatermarkx': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '🥬No Watermark🥬'}, type: 1},
-                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '🎵Audio🎵'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.watermark },
-                    caption: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-            case 'tiktokmp3x': case 'tiktokaudiox': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '🥬No Watermark🥬'}, type: 1},
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '🥬With Watermark🥬'}, type: 1}
-                ]
-                let buttonMessage = {
-                    text: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 2
-                }
-                let msg = await GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
-                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
-            }
-            break
-	        case 'instagramx': case 'igx': case 'igdlx': {
-                if (!text) return reply(`No Query Url!`)
-                reply(mess.wait)
-                if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
-                    let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url: isUrl(text)[0] }, 'apikey'))
-                    for (let media of anu.data) GojoMdNx.sendMedia(m.chat, media, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
-                } else if (/\/stories\/([^\s&]+)/.test(isUrl(text)[0])) {
-                    let anu = await fetchJson(api('zenz', '/downloader/instastory', { url: isUrl(text)[0] }, 'apikey'))
-                    GojoMdNx.sendMedia(m.chat, anu.media[0].url, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
-                }
-            }
-            break
-		//Backup, for example, the video above doesn't come out\\
-		case 'igeh': case 'instagram2x': case 'ig2': case 'igdl2': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                
-                let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url:text }, 'apikey'))
-                GojoMdNx.sendMessage(m.chat, { video: { url: anu.data[0] } }, { quoted: m })
-            }
-            break
-            case 'joox': case 'jooxdl': {
-                if (!text) return reply(`No Query Title`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/joox', { query: text }, 'apikey'))
-                let msg = await GojoMdNx.sendImage(m.chat, anu.result.img, `🐦 Title : ${anu.result.lagu}\n🐦 Album : ${anu.result.album}\n🐦 Singer : ${anu.result.penyanyi}\n🐦 Publish : ${anu.result.publish}\n🐦 Lyrics :\n${anu.result.lirik.result}`, m)
-                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
-            }
-            break
-            case 'soundcloud': case 'scdl': {
-                if (!text) return reply(`No Query Title`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/soundcloud', { url: isUrl(text)[0] }, 'apikey'))
-                let msg = await GojoMdNx.sendImage(m.chat, anu.result.thumb, `🐦 Title : ${anu.result.title}\n🐦 Url : ${isUrl(text)[0]}`)
-                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
-            }
-            break
-	        case 'twitdlx': case 'twitterx': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `twittermp3 ${text}`, buttonText: {displayText: '🎵Audio🎵'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.HD || anu.result.SD },
-                    caption: util.format(anu.result),
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-            case 'twittermp3x': case 'twitteraudiox': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/api/downloader/twitter', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `twitter ${text}`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
-                ]
-                let buttonMessage = {
-		    image: { url: anu.result.thumb },
-                    caption: util.format(anu.result),
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 4
-                }
-                let msg = await GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
-                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
-            }
-            break
-	        case 'fbdlx': case 'fbx': case 'facebookx': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                GojoMdNx.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `🐦 Title : ${anu.result.title}`}, { quoted: m })
-            }
-            break
-	        case 'pindl': case 'pinterestdl': {
-                if (!text) return reply(`Enter Query Link!`)
-                reply(mess.wait)
-                let anu = await fetchJson(api('zenz', '/api/downloader/pinterestdl', { url: text }, 'apikey'))
-                GojoMdNx.sendMessage(m.chat, { video: { url: anu.result }, caption: `Download From ${text}` }, { quoted: m })
-            }
-            break
-            case 'umma': case 'ummadl': {
-	        if (!text) return reply(`Example : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`)
-                let { umma } = require('./lib) scraper')
-		let anu = await umma(isUrl(text)[0])
-		if (anu.type == 'video') {
-		    let buttons = [
-                        {buttonId: `ytmp3 ${anu.media[0]} 128kbps`, buttonText: {displayText: '🎵Audio🎵'}, type: 1},
-                        {buttonId: `ytmp4 ${anu.media[0]} 360p`, buttonText: {displayText: '📽️Video📽️'}, type: 1}
-                    ]
-		    let buttonMessage = {
-		        image: { url: anu.author.profilePic },
-			caption: `
-🐦 Title : ${anu.title}
-🐦 Author : ${anu.author.name}
-🐦 Like : ${anu.like}
-🐦 Caption : ${anu.caption}
-🐦 Url : ${anu.media[0]}
-To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp4 Command With The Url Above
-`,
-			footer: GojoMdNx.user.name,
-			buttons,
-			headerType: 4
-		    }
-		    GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
-		} else if (anu.type == 'image') {
-		    anu.media.map(async (url) => {
-		        GojoMdNx.sendMessage(m.chat, { image: { url }, caption: `🐦 Title : ${anu.title}\n🐦 Author : ${anu.author.name}\n🐦 Like : ${anu.like}\n🐦 Caption : ${anu.caption}` }, { quoted: m })
-		    })
-		}
-	    }
-	    break
-        case 'ringtone': {
-		if (!text) return reply(`Example : ${prefix + command} black rover`)
-        let { ringtone } = require('./lib/scraper')
-		let anu = await ringtone(text)
-		let result = anu[Math.floor(Math.random() * anu.length)]
-		GojoMdNx.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
-	    }
-	    break
-		case 'iqraxxx': {
-		oh = `Example : ${prefix + command} 3\n\nIQRA Which Is Available : 1,2,3,4,5,6`
-		if (!text) return reply(oh)
-		yy = await getBuffer(`https://islamic-api-indonesia.herokuapp.com/api/data/pdf/iqra${text}`)
-		GojoMdNx.sendMessage(m.chat, {document: yy, mimetype: 'application/pdf', fileName: `iqra${text}.pdf`}, {quoted:m}).catch ((err) => reply(oh))
-		}
-		break
-		case 'juzamma': {
-		if (args[0] === 'pdf') {
-		reply(mess.wait)
-		GojoMdNx.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pdf'}, mimetype: 'application/pdf', fileName: 'juz-amma-arab-latin-indonesia.pdf'}, {quoted:m})
-		} else if (args[0] === 'docx') {
-		reply(mess.wait)
-		GojoMdNx.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.docx'}, mimetype: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', fileName: 'juz-amma-arab-latin-indonesia.docx'}, {quoted:m})
-		} else if (args[0] === 'pptx') {
-		reply(mess.wait)
-		GojoMdNx.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.pptx'}, mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', fileName: 'juz-amma-arab-latin-indonesia.pptx'}, {quoted:m})
-		} else if (args[0] === 'xlsx') {
-		reply(mess.wait)
-		GojoMdNx.sendMessage(m.chat, {document: {url: 'https://fatiharridho.my.id/database/islam/juz-amma-arab-latin-indonesia.xlsx'}, mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'juz-amma-arab-latin-indonesia.xlsx'}, {quoted:m})
-		} else {
-		reply(`What Format Do You Want? ? Example : ${prefix + command} pdf
-
-Available Formats: pdf, docx, pptx, xlsx`)
-		}
-		}
-		break
-		case 'hadisxxx': case 'hadistxxx': {
-		if (!args[0]) return reply(`Example:
-${prefix + command} bukhari 1
-${prefix + command} abu-daud 1
-
-Options Available:
-abu-daud
-1 - 4590
-ahmad
-1 - 26363
-bukhari
-1 - 7008
-darimi
-1 - 3367
-ibu-majah
-1 - 4331
-nasai
-1 - 5662
-malik
-1 - 1594
-muslim
-1 - 5362`)
-		if (!args[1]) return reply(`Which Hadith??\n\nExample:\n${prefix + command} muslim 1`)
-		try {
-		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${args[0]}`)
-		let { number, arab, id } = res.find(v => v.number == args[1])
-		reply(`No. ${number}
-
-${arab}
-
-${id}`)
-		} catch (e) {
-		reply(`Hadith Not Found !`)
-		}
-		}
-		break
-		case 'alquranxxx': {
-		if (!args[0]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nThen The Result Is Surah Al-Fatihah Verse 2 Along With The Audio, And The Verse Is Just 1`)
-		if (!args[1]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nThen The Result Is Surah Al-Fatihah Verse 2 Along With The Audio, And The Verse Is Just 1`)
-		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
-		let txt = `*Arab* : ${res.result.data.text.arab}
-*English* : ${res.result.data.translation.en}
-*Indonesia* : ${res.result.data.translation.id}
-
-( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-		reply(txt)
-		GojoMdNx.sendMessage(m.chat, {audio: { url: res.result.data.audio.primary }, mimetype: 'audio/mpeg'}, { quoted : m })
-		}
-		break
-		case 'tafsirsurahxxx': {
-		if (!args[0]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nThen The Result Is The Interpretation Of Surah Al-Fatihah Verse 2`)
-		if (!args[1]) return reply(`Usage Examples:\n${prefix + command} 1 2\n\nThen The Result Is The Interpretation Of Surah Al-Fatihah Verse 2`)
-		let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/quran?surah=${args[0]}&ayat=${args[1]}`)
-		let txt = `「 *Tafsir Surah*  」
-
-*Short* : ${res.result.data.tafsir.id.short}
-
-*Long* : ${res.result.data.tafsir.id.long}
-
-( Q.S ${res.result.data.surah.name.transliteration.id} : ${res.result.data.number.inSurah} )`
-		reply(txt)
-		}
-		break
-		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'squirrel':
-                try {
-                let set
-                if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
-                if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
-                if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
-                if (/earrape/.test(command)) set = '-af volume=12'
-                if (/fast/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
-                if (/fat/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
-                if (/nightcore/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
-                if (/reverse/.test(command)) set = '-filter_complex "areverse"'
-                if (/robot/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
-                if (/slow/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
-                if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
-                if (/tupai/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
-                if (/audio/.test(mime)) {
-                reply(mess.wait)
-                let media = await GojoMdNx.downloadAndSaveMediaMessage(quoted)
-                let ran = getRandom('.mp3')
-                exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
-                fs.unlinkSync(media)
-                if (err) return reply(err)
-                let buff = fs.readFileSync(ran)
-                GojoMdNx.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
-                fs.unlinkSync(ran)
-                })
-                } else reply(`Reply To The Audio You Want To Change With Caption *${prefix + command}*`)
-                } catch (e) {
-                reply(e)
-                }
-                break
-            case 'setcmd': {
-                if (!m.quoted) return reply(`Reply Message!`)
-                if (!m.quoted.fileSha256) return reply(`SHA256 Hash Missing`)
-                if (!text) return reply(`For What Command?`)
-                let hash = m.quoted.fileSha256.toString('base64')
-                if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) return reply(`You Have No Permission To Change This Sticker Command`)
-                global.db.data.sticker[hash] = {
-                    text,
-                    mentionedJid: m.mentionedJid,
-                    creator: m.sender,
-                    at: + new Date,
-                    locked: false,
-                }
-                reply(`Done!`)
-            }
-            break
-            case 'delcmd': {
-                let hash = m.quoted.fileSha256.toString('base64')
-                if (!hash) return reply(`No Hashes`)
-                if (global.db.data.sticker[hash] && global.db.data.sticker[hash].locked) return reply(`You Have No Permission To Delete This Sticker Command`)
-                delete global.db.data.sticker[hash]
-                reply(`Done!`)
-            }
-            break
-            case 'listcmd': {
-                let teks = `
-*Hash List*
-Info: *bold* hash is Locked
-${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} : ${value.text}`).join('\n')}
-`.trim()
-                GojoMdNx.sendText(m.chat, teks, m, { mentions: Object.values(global.db.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], []) })
-            }
-            break
-            case 'lockcmd': {
-                if (!isCreator) return replay(`${mess.owner}`)
-                if (!m.quoted) return reply(`Reply Message!`)
-                if (!m.quoted.fileSha256) return reply(`SHA256 Hash Missing`)
-                let hash = m.quoted.fileSha256.toString('base64')
-                if (!(hash in global.db.data.sticker)) return reply(`Hash Not Found In Database`)
-                global.db.data.sticker[hash].locked = !/^un/i.test(command)
-                reply('Done!')
-            }
-            break
-            case 'اضافة.رسالة': {
-                if (!m.quoted) return reply(`*「 اكتب مالذي تريد ان تضيفه ف قائمة الرسائل 」◣*`)
-                if (!text) return reply(`Example : ${prefix + command} File Name`)
-                let msgs = global.db.data.database
-                if (text.toLowerCase() in msgs) return reply(`'${text}'*「 هذه الرسالة موجودة بالفعل ف القائمة 」◣*`)
-                msgs[text.toLowerCase()] = quoted.fakeObj
-reply(`*「 تم اضافة الرسالة」◣*'${text}'
-    
-「 الرمز ${text} 」◣
-
-「 اكتب *قائمة.الرسائل* لكي ترى الرسائل التي اضفتها 」◣`)
-            }
-            break
-            case 'حصلت.رسالة': {
-                if (!text) return reply(`Example : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
-                let msgs = global.db.data.database
-                if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
-                GojoMdNx.copyNForward(m.chat, msgs[text.toLowerCase()], true)
-            }
-            break
-            case 'قائمة.الرسائل': {
-                let msgs = JSON.parse(fs.readFileSync('./database/database.json'))
-	        let seplit = Object.entries(global.db.data.database).map(([nama, isi]) => { return { nama, ...isi } })
-		let teks = '「 قائمة الرسائل 」\n\n'
-		for (let i of seplit) {
-		    teks += `💫 *الرمز:* ${i.nama}\n💫 *النوع:* ${getContentType(i.message).replace(/Message/i, '')}\n────────────────────────\n\n`
-	        }
-	        reply(teks)
-	    }
-	    break
-            case 'حذف.الرسالة': case 'deletemsg': {
-	        let msgs = global.db.data.database
-	        if (!(text.toLowerCase() in msgs)) return reply(`*「 هذا الامر غير موجود ف القائمة 」◣*`)
-		delete msgs[text.toLowerCase()]
-		reply(`*「 تم حذف الامر '${text}' من قائمة الرسائل 」◣*`)
-            }
-	    break
-	    case 'anonymous': {
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-				this.anonymous = this.anonymous ? this.anonymous : {}
-				let buttons = [
-                    { buttonId: 'Start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
-                ]
-                GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`Hi ${await GojoMdNx.getName(m.sender)} Welcome To Anonymous Chat\n\nClick The Button Below To Find A Partner\`\`\``, GojoMdNx.user.name, m)
-            }
-			break
-            case 'keluar': case 'leave': {
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                let room = Object.values(this.anonymous).find(room => room.check(m.sender))
-                if (!room) {
-                    let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner \`\`\``)
-                   reply(false)
-                }
-                reply('Ok')
-                let other = room.other(m.sender)
-                if (other) await GojoMdNx.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
-                delete this.anonymous[room.id]
-                if (command === 'leave') break
-            }
-            case 'mulai': case 'start': {
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`You Are Still In An Anonymous Session, Press The Button Below To Terminate Your Anonymous Session\`\`\``, GojoMdNx.user.name, m)
-                    reply(false)
-                }
-                let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
-                if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, GojoMdNx.user.name, m)
-                    room.b = m.sender
-                    room.state = 'CHATTING'
-                    await GojoMdNx.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, GojoMdNx.user.name, m)
-                } else {
-                    let id = + new Date
-                    this.anonymous[id] = {
-                        id,
-                        a: m.sender,
-                        b: '',
-                        state: 'WAITING',
-                        check: function (who = '') {
-                            return [this.a, this.b].includes(who)
-                        },
-                        other: function (who = '') {
-                            return who === this.a ? this.b : who === this.b ? this.a : ''
-                        },
-                    }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, GojoMdNx.user.name, m)
-                }
-                break
-            }
-            case 'next': case 'lanjut': {
-                if (m.isGroup) return reply('Features Cannot Be Used For Groups!')
-                this.anonymous = this.anonymous ? this.anonymous : {}
-                let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
-                if (!romeo) {
-                    let buttons = [
-                        { buttonId: 'start', buttonText: { displayText: '🚶Start🚶' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`You Are Not In An Anonymous Session, Press The Button To Find A Partner\`\`\``)
-                    reply(false)
-                }
-                let other = romeo.other(m.sender)
-                if (other) await GojoMdNx.sendText(other, `\`\`\`Partner Has Left Anonymous Session\`\`\``, m)
-                delete this.anonymous[romeo.id]
-                let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
-                if (room) {
-                    let buttons = [
-                        { buttonId: 'next', buttonText: { displayText: '⏩Skip⏩' }, type: 1 },
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(room.a, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, GojoMdNx.user.name, m)
-                    room.b = m.sender
-                    room.state = 'CHATTING'
-                    await GojoMdNx.sendButtonText(room.b, buttons, `\`\`\`Successfully Found Partner, Now You Can Send Message\`\`\``, GojoMdNx.user.name, m)
-                } else {
-                    let id = + new Date
-                    this.anonymous[id] = {
-                        id,
-                        a: m.sender,
-                        b: '',
-                        state: 'WAITING',
-                        check: function (who = '') {
-                            return [this.a, this.b].includes(who)
-                        },
-                        other: function (who = '') {
-                            return who === this.a ? this.b : who === this.b ? this.a : ''
-                        },
-                    }
-                    let buttons = [
-                        { buttonId: 'keluar', buttonText: { displayText: '🛑Stop🛑' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, `\`\`\`Please Wait, Looking For A Partner\`\`\``, GojoMdNx.user.name, m)
-                }
-                break
-            }
-            case 'عام': {
-                if (!isCreator) return replay(`${mess.owner}`)
-                GojoMdNx.public = true
-                reply('*「 تم 」◣*')
-            }
-            break
-            case 'خاص': {
-                if (!isCreator) return replay(`${mess.owner}`)
-                GojoMdNx.public = false
-                reply('*「 تم 」◣*')
-            }
-            break
-            case 'ping': case 'botstatus': case 'statusbot': {
-                const used = process.memoryUsage()
-                const cpus = os.cpus().map(cpu => {
-                    cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
-			        return cpu
-                })
-                const cpu = cpus.reduce((last, cpu, _, { length }) => {
-                    last.total += cpu.total
-                    last.speed += cpu.speed / length
-                    last.times.user += cpu.times.user
-                    last.times.nice += cpu.times.nice
-                    last.times.sys += cpu.times.sys
-                    last.times.idle += cpu.times.idle
-                    last.times.irq += cpu.times.irq
-                    return last
-                }, {
-                    speed: 0,
-                    total: 0,
-                    times: {
-			            user: 0,
-			            nice: 0,
-			            sys: 0,
-			            idle: 0,
-			            irq: 0
-                }
-                })
-                let timestamp = speed()
-                let latensi = speed() - timestamp
-                neww = performance.now()
-                oldd = performance.now()
-                respon = `
-Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\nRuntime : ${runtime(process.uptime())}
-
-💻 Info Server
-RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-
-_NodeJS Memory Usaage_
-${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
-
-${cpus[0] ? `_Total CPU Usage_
-${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
-_CPU Core(s) Usage (${cpus.length} Core CPU)_
-${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
-                `.trim()
-                reply(respon)
-            }
-            break
-            case 'speedtest': {
-            reply('Testing Speed...')
-            let cp = require('child_process')
-            let { promisify } = require('util')
-            let exec = promisify(cp.exec).bind(cp)
-          let o
-          try {
-          o = await exec('python speed.py')
-          } catch (e) {
-          o = e
-         } finally {
-        let { stdout, stderr } = o
-        if (stdout.trim()) reply(stdout)
-        if (stderr.trim()) reply(stderr)
-            }
-            }
-            break
-	case 'owner': case 'creator': case 'المالك' : {
-                GojoMdNx.sendContact(m.chat, global.owner, m)
-            }
-            break
-case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
-
-					reply(mess.wait)
-					axios.get(`https://api.waifu.pics/sfw/${command}`)
-					.then(({data}) => {
-						GojoMdNx.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
-					})
-					break
-				case 'وايفو': case 'لولي':
-					reply(mess.wait)
-					axios.get(`https://api.waifu.pics/sfw/waifu`)
-					.then(({data}) => {
-					GojoMdNx.sendImage(m.chat, data.url, mess.success, m)
-					})
-					break
-case "setmenuxxx": 
-if (!text) return reply("1. image\n2. list\n3. catalog\n\nExample .setmenu image")
-if (q == "image") {
-typemenu = 'image'
-reply("Success Changing Menu To "+q)
-} else if (q == "list") {
-typemenu = 'list'
-reply("Success Changing Menu To "+q)
-} else if (q == "catalog") {
-typemenu = 'catalog'
-reply("Success Changing Menu To "+q)
-}
-                    break
-                     case '4868648646': case '8796879':{
-                           	timestampe = speed();
-latensie = speed() - timestampe
- anu = ` `
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/ko.jpg')},
-                            hydratedFooterText: `┌─❖
-┌─❖ مـرحبـاً 🤗 」
-└┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت رايزل 👋🏻」◣
-││✑「مـن مـمـلـكـة كلوفر 🤗」◣
-│└───────────────┈ ⳹
- 「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 رايزل ✨🤞🏻 」◣
-│✙「 رقـم الـمـالـك 」◣ : ${global.owner}
-│✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑  「 اضـغـط عـلـى الـخـيـارات 🤗 」◣
-   └───────────────┈ ⳹`,
-                             hydratedButtons: [{
-                                urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                            	urlButton: {
-                                displayText: '「 رابط الاستقبال 」「📌」◣',
-                                    url: `${sc}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '「 القائمة الاساسية 」「🗒️」◣',
-                                    id: `${prefix}allmenu`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '「 قائمة الخيارات 」「📑」◣',
-                                    id: `${prefix}command`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '「 المالك 」「👤」◣',
-                                    id: `${prefix}owner`
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat })
-                GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
-break
-            case '90990919191': case '909091919': {
-            	timestampe = speed();
-latensie = speed() - timestampe
-                anu = ``
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')}, 
-                            hydratedFooterText: `
-┌─❖ مـرحبـاً 🤗 」
-└┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت رايزل 👋🏻」◣
-││✑「مـن مـمـلـكـة كلوفر 🤗」◣
-│└───────────────┈ ⳹
- 「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 رايزل ✨🤞🏻 」◣
-│✙「 رقـم الـمـالـك 」◣ : ${global.owner}
-│✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
-└┬──────────────┈ ⳹
-   │✑  「 اضـغـط عـلـى الـخـيـارات 🤗 」◣
-   └───────────────┈ ⳹`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                            	urlButton: {
-                                displayText: '「 رابط الاستقبال 」「📌」◣',
-                                    url: `${sc}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '「 القائمة الاساسية 」「🗒️」◣',
-                                    id: `${prefix}allmenu`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '「 قائمة الخيارات 」「📑」◣',
-                                    id: `${prefix}command`
-                                }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '「 المالك 」「👤」◣',
-                                    id: `${prefix}owner`
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat })
-                GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
-                break
-	case 'الاوامر': case 'اوامر': {
-let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                listMessage :{
-                    title: `「 مرحبا👋🏻  」◣
-		    「 معك بوت غوجو 🤗 」◣
-		    「 من مملكة غولد 🏮」◣`,
-                    description: `「 اختر قائمة من فضلك 」◣`,
-                    buttonText: "「 القائمة 」◣",
-                    footerText: `「 تحت الصيانة ⚙️」◣`,
-                    listType: "SINGLE_SELECT",
-                    sections: [{
-								"title": "قائمة الخيارات",
-								"rows": [
-									{
-										"title": "المقدمة",
-										"description": ".1.",
-										"rowId": `${prefix}mai`
-									}
-								]
-							},
-							{
-								"title": "قسم القائمة",
-								"rows": [
-									{
-										"title": "القائمة",
-										"description": ".2.",
-										"rowId": `${prefix}mainmenu`
-									},
-									{
-										"title": "قائمة المالك",
-										"description": ".3.",
-										"rowId": `${prefix}ownermenu`
-										},
-									{
-										"title": "قائمة المجموعات",
-										"description": ".4.",
-										"rowId": `${prefix}groupmenu`
-										},
-									{
-										"title": "قائمة الالعاب",
-										"description": ".5.",
-										"rowId": `${prefix}rpgmenu`
-									},
-									{
-										"title": "قائمة التنزيلات",
-										"description": ".6.",
-										"rowId": `${prefix}downloadmenu`
-									},
-									{
-										"title": "قائمة البحث",
-										"description": ".7.",
-										"rowId": `${prefix}searchmenu`
-									},
-									{
-											"title": "قائمة صور الانمي",
-										"description": ".8.",
-										"rowId": `${prefix}randommenu`
-										},
-										{
-											"title": "قائمة ملصقات الانمي",
-										"description": ".9.",
-										"rowId": `${prefix}randomanimemenu`
-										},
-										{
-											"title": "قائمة السخرية",
-										"description": ".10.",
-										"rowId": `${prefix}funmenu`
-										},
-										{
-											"title": "قائمة التحويلات",
-										"description": ".11.",
-										"rowId": `${prefix}convertmenu`
-										},
-										{
-											"title": "قائمة البيانات",
-										"description": ".12.",
-										"rowId": `${prefix}databasemenu`
-										},
-										{
-											"title": "قائمة مغير الاصوات",
-										"description": ".13.",
-										"rowId": `${prefix}voicechangermenu`
-										},
-										{
-											"title": "قائمة الزخرفة",
-										"description": ".14.",
-										"rowId": `${prefix}textpromenu`
-										},
-										{
-											"title": "قائمة القرآن",
-										"description": ".15.",
-										"rowId": `${prefix}islamicmenu`
-										},
-										{
-											"title": "قائمة اضافية",
-										"description": ".16.",
-										"rowId": `${prefix}horoscopemenu`
-										}
-								]
-							},
-							{
-								"title": "المملكة",
-								"rows": [
-									{
-										"title": "قائمة استمارات مملكة غولد",
-										"description": ".17.",
-										"rowId": `${prefix}anon`
-									}
-								]
-							},
-							{
-								"title": "نبذة",
-								"rows": [
-									{
-										"title": "تاريخ مملكة غولد",
-										"description": ".18.",
-										"rowId": `${prefix}tqtt`
-									}
-								]
-							}
-						],
-          listType: 1
-                }
-            }), {})
-            GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
-            }
-            break
-    case 'donasi': case 'donate': case 'sewabot': case 'sewa': {
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c15f725add0381fb69c4b.jpg' }, caption: `` }, { quoted: m })
-            }
-            break
-            case 'التسجhgjيل': case 'التسجيل': {
-                reply(`「 الفرع الخاص ل التعليم على البوت 」◣
-
-「 _https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3_ 」◣
-
-「 نرحب بالجميع. 」◣`)
-            }
-            break
-case '9807786789678': {
-  	anu = `
-┏━「 *${botname}* 」━━⭓ 
-┃╔══☯︎「 MAIN 」☯︎
-┃╠ ${prefix}alive
-┃╠ ${prefix}script
-┃╠ ${prefix}speedtest
-┃╠ ${prefix}ping
-┃╠ ${prefix}owner
-┃╠ ${prefix}menu
-┃╠ ${prefix}delete
-┃╠ ${prefix}chatinfo
-┃╠ ${prefix}quoted
-┃╠ ${prefix}listpc
-┃╠ ${prefix}listgc
-┃╠ ${prefix}donate
-┃╠ ${prefix}report [bug]
-┃╠══✪「 OWNER 」 ☯︎
-┃╠ ${prefix}chat [option]
-┃╠ ${prefix}join [link]
-┃╠ ${prefix}leave
-┃╠ ${prefix}block [user]
-┃╠ ${prefix}unblock [user]
-┃╠ ${prefix}bcgroup [text]
-┃╠ ${prefix}bcall [text]
-┃╠ ${prefix}setppbot [image]
-┃╠ ${prefix}setexif
-┃╠══✪「 GROUP 」 ☯︎      
-┃╠${prefix}grouplink
-┃╠${prefix}ephemeral [option]
-┃╠${prefix}setgcpp [image]
-┃╠${prefix}setname [text]
-┃╠${prefix}setdesc [text]
-┃╠${prefix}group [text]
-┃╠${prefix}editinfo [option]
-┃╠${prefix}add [user]
-┃╠${prefix}kick [reply/tag]
-┃╠${prefix}hidetag [text]
-┃╠${prefix}tagall [text]
-┃╠${prefix}antilink [on/off]
-┃╠${prefix}mute [on/off]
-┃╠${prefix}promote [reply/tag]
-┃╠${prefix}demote [reply/tag]
-┃╠${prefix}vote
-┃╠${prefix}devote
-┃╠${prefix}upvote
-┃╠${prefix}checkvote
-┃╠${prefix}delvote
-┃╠══☯︎「 RPG 」 ☯︎
-┃╠${prefix}hunting
-┃╠${prefix}mining
-┃╠${prefix}heal
-┃╠${prefix}userlimit
-┃╠${prefix}profile
-┃╠${prefix}inventory
-┃╠${prefix}leaderboard
-┃╠${prefix}buy [option]
-┃╠${prefix}sell [option]
-┃╠═✪「 DOWNLOADER 」☯︎
-┃╠${prefix}ytmp3 [url|quality]
-┃╠${prefix}ytmp4 [url|quality]
-┃╠${prefix}getmusic [yt link]
-┃╠${prefix}getvideo [yt link]
-┃╠${prefix}umma [query]
-┃╠${prefix}joox [query]
-┃╠${prefix}soundcloud [url]
-┃╠══✪「 SEARCHER 」 ☯︎
-┃╠${prefix}play [query]
-┃╠${prefix}song [query]
-┃╠${prefix}yts [query]
-┃╠${prefix}google [query]
-┃╠${prefix}gimage [query]
-┃╠${prefix}pinterest [query]
-┃╠${prefix}wallpaper [query]
-┃╠${prefix}wikimedia [query]
-┃╠${prefix}ytsearch [query]
-┃╠${prefix}ringtone [query]
-┃╠${prefix}webtoon [query]
-┃╠══✪「 RANDOM 」☯︎
-┃╠${prefix}coffee
-┃╠${prefix}animequote (indo)
-┃╠${prefix}couplepp
-┃╠═✪「 RANDOM ANIME 」☯︎
-┃╠${prefix}loli
-┃╠${prefix}bully
-┃╠${prefix}cuddle
-┃╠${prefix}cry
-┃╠${prefix}hug
-┃╠${prefix}awoo
-┃╠${prefix}kiss
-┃╠${prefix}lick
-┃╠${prefix}pat
-┃╠${prefix}smug
-┃╠${prefix}bonk
-┃╠${prefix}yeet
-┃╠${prefix}blush
-┃╠${prefix}smile
-┃╠${prefix}wave
-┃╠${prefix}highfive
-┃╠${prefix}handhold
-┃╠${prefix}nom
-┃╠${prefix}glomp
-┃╠${prefix}bite
-┃╠${prefix}slap
-┃╠${prefix}kill
-┃╠${prefix}happy
-┃╠${prefix}wink
-┃╠${prefix}poke
-┃╠${prefix}dance
-┃╠${prefix}cringe
-┃╠══✪「 FUN 」 ☯︎
-┃╠ ${prefix}how [text
-┃╠ ${prefix}when [text]
-┃╠ ${prefix}is [text]
-┃╠ ${prefix}what [text]
-┃╠ ${prefix}can [text]
-┃╠ ${prefix}rate [text]
-┃╠ ${prefix}wangy [text]
-┃╠ ${prefix}beautifulcheck [tag]
-┃╠ ${prefix}awesomecheck [tag]
-┃╠ ${prefix}prettycheck [tag]
-┃╠ ${prefix}lesbiancheck [tag]
-┃╠ ${prefix}gaycheck [tag]
-┃╠ ${prefix}cutecheck [tag]
-┃╠ ${prefix}uglycheck [tag]
-┃╠ ${prefix}hornycheck [tag]
-┃╠ ${prefix}charactercheck [tag]
-┃╠ ${prefix}lovelycheck [tag]
-┃╠ ${prefix}couple
-┃╠ ${prefix}mysoulmate
-┃╠ ${prefix}hot
-┃╠ ${prefix}sexy
-┃╠ ${prefix}kind
-┃╠ ${prefix}idiot
-┃╠ ${prefix}handsome
-┃╠ ${prefix}beautiful
-┃╠ ${prefix}cute
-┃╠ ${prefix}pretty
-┃╠ ${prefix}lesbian
-┃╠ ${prefix}noob
-┃╠ ${prefix}bastard
-┃╠ ${prefix}foolish
-┃╠ ${prefix}nerd
-┃╠ ${prefix}asshole
-┃╠ ${prefix}gay
-┃╠ ${prefix}smart
-┃╠ ${prefix}stubble
-┃╠ ${prefix}dog
-┃╠ ${prefix}horny
-┃╠ ${prefix}cunt
-┃╠ ${prefix}wibu
-┃╠ ${prefix}tictactoe
-┃╠ ${prefix}delttt
-┃╠ ${prefix}guess [option]
-┃╠ ${prefix}math [mode]
-┃╠ ${prefix}suitpvp [tag]
-┃╠═══✪「 CONVERTER 」 ☯︎
-┃╠ ${prefix}toimage [reply stick]
-┃╠ ${prefix}sticker [reply img|gif]
-┃╠ ${prefix}emojimix [moji+moji]
-┃╠ ${prefix}tovideo [reply img]
-┃╠ ${prefix}togif [reply stick]
-┃╠ ${prefix}tourl [reply img]
-┃╠ ${prefix}tovn [reply aud]
-┃╠ ${prefix}tomp3 [reply vn]
-┃╠ ${prefix}toaudio [reply vid]
-┃╠ ${prefix}ebinary [reply txt]
-┃╠ ${prefix}dbinary [reply txt]
-┃╠ ${prefix}styletext [text]
-┃╠══✪「 DATABASE 」 ☯︎
-┃╠ ${prefix}setcmd
-┃╠ ${prefix}listcmd
-┃╠ ${prefix}delcmd
-┃╠ ${prefix}lockcmd
-┃╠ ${prefix}addmsg
-┃╠ ${prefix}listmsg
-┃╠ ${prefix}getmsg
-┃╠ ${prefix}delmsg
-┃╠═✪「 ANONYMOUS CHAT 」☯︎
-┃╠${prefix}anonymous
-┃╠${prefix}start
-┃╠${prefix}next
-┃╠${prefix}leave
-┃╠═✪「 VOICE CHANGER 」☯︎
-┃╠${prefix}bass [reply aud]
-┃╠${prefix}blown [reply aud]
-┃╠${prefix}deep [reply aud]
-┃╠${prefix}earrape [reply aud]
-┃╠${prefix}fast [reply aud]
-┃╠${prefix}fat [reply aud]
-┃╠${prefix}nightcore [reply aud]
-┃╠${prefix}reverse [reply aud]
-┃╠${prefix}robot [reply aud]
-┃╠${prefix}slow [reply aud]
-┃╠${prefix}squirrel [reply aud]
-┃╠══✪「 ISLAMIC 」☯︎
-┃╠${prefix}juzamma
-┃╠══✪「 HOROSCOPE 」☯︎
-┃╠${prefix}nomorhoki (indo)
-┃╠${prefix}artimimpi (indo)
-┃╠${prefix}artinama (indo)
-┃╠${prefix}ramaljodoh (indo)
-┃╠${prefix}ramaljodohbali (indo)
-┃╠${prefix}suamiistri (indo)
-┃╠${prefix}ramalcinta (indo)
-┃╠${prefix}cocoknama (indo)
-┃╠${prefix}pasangan (indo)
-┃╠${prefix}jadiannikah (indo)
-┃╠${prefix}sifatusaha (indo)
-┃╠${prefix}rezeki (indo)
-┃╠${prefix}pekerjaan (indo)
-┃╠${prefix}nasib (indo)
-┃╠${prefix}penyakit (indo)
-┃╠${prefix}tarot (indo)
-┃╠${prefix}fengshui (indo)
-┃╠${prefix}haribaik (indo)
-┃╠${prefix}harisangar (indo)
-┃╠${prefix}harisial (indo)
-┃╠${prefix}nagahari (indo)
-┃╠${prefix}arahrezeki (indo)
-┃╠${prefix}peruntungan (indo)
-┃╠${prefix}weton (indo)
-┃╠${prefix}karakter (indo)
-┃╠${prefix}keberuntungan (indo)
-┃╠${prefix}memancing (indo)
-┃╠${prefix}masasubur (indo)
-┃╠${prefix}zodiak (indo)
-┃╠${prefix}shio (indo)
-┃╚═══════✍︎𝑁𝑒𝑥𝑢𝑠𝑁𝑤
-┗━「 *Created By ${ownername}*  𖠌」━⭓`
-    const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
-                            hydratedFooterText: `${pushname}`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '「 المالك 」「👤」◣',
-                                    id: `${prefix}owner`
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat })
-                GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
-            }
-break
-case 'mainmenu':
-var unicorn = await getBuffer(picak+'.2.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 القائمة 」
-┃╠الاوامر
-┃╠المالك
-┃╠التسجيل
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-		
-case 'grupmenu': case 'groupmenu':
-var unicorn = await getBuffer(picak+'.4.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 المجموعات 」	        
-┃╠المنشن
-┃╠المنشن.المخفي
-┃╠المتصلين
-┃╠الرابط
-┃╠اضافة
-┃╠ترقية 
-┃╠تخفيض
-┃╠طرد
-┃╠الجروب
-┃╠التعديل
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-		
-
-case 'rpgmenu':
-var unicorn = await getBuffer(picak+'.5.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓
-┃╔═✪「 الألعاب 」	        
-┃╠الاكس او | ttt
-┃╠حذف الاكس او | delttt
-┃╠الكتابة | كت
-┃╠الكتابة | كتت
-┃╠الكتابة | كتتت
-┃╠بوت اعمل فعالية المارد
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-
-case 'funmenu':
-var unicorn = await getBuffer(picak+'.10.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 السخرية 」	        
-┃╠احمق 
-┃╠بشع
-┃╠جبان
-┃╠جميل
-┃╠حزين
-┃╠حمار
-┃╠خروف
-┃╠ذكي
-┃╠رقاص
-┃╠زفت
-┃╠سافل
-┃╠شجاع
-┃╠صادق
-┃╠صنم
-┃╠طيب
-┃╠ظالم
-┃╠عاقل
-┃╠غامض
-┃╠غبي
-┃╠قرد
-┃╠كاذب
-┃╠كريه
-┃╠كلب
-┃╠مبااع
-┃╠مجنون
-┃╠محبوب
-┃╠محترم
-┃╠محتال
-┃╠مخادع
-┃╠مخدوع
-┃╠مسكين
-┃╠مستفز
-┃╠مضحك
-┃╠مظلوم
-┃╠مكروه
-┃╠مؤدب
-┃╠نجس
-┃╠وصخ
-┃╠ورع
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-
-case 'ownermenu':
-var unicorn = await getBuffer(picak+'.3.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 المالك 」	        
-┃╠انضم
-┃╠غادر
-┃╠حطها.خلفيتك
-┃╠عام
-┃╠خاص
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'downloadmenu':
-var unicorn = await getBuffer(picak+'.6.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 التنزيلات 」	        
-┃╠رابط فيديو | ytmp4
-┃╠رابط صوتية | ytmp3
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'searchmenu':
-var unicorn = await getBuffer(picak+'.7.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 البحث 」	        
-┃╠صورة
-┃╠فيديو
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'randommenu':
-var unicorn = await getBuffer(picak+'.8.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 صور الانمي 」	        
-┃╠تطقيم |طقم
-┃╠لولي
-┃╠وايفو
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'randomanimemenu':
-var unicorn = await getBuffer(picak+'.9.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔✪「 ملصقات الانمي 」	        
-┃╠سعيد | happy
-┃╠حزين| cry
-┃╠تربيت | pat
-┃╠حضن | hug
-┃╠كرنج | cringe
-┃╠اليد | handhold
-┃╠عناق | cuddle
-┃╠كئيب | glomp
-┃╠متعجرف | smug
-┃╠صفع | slap
-┃╠قتل | kill
-┃╠خجل | blush
-┃╠ابتسامة | smile
-┃╠يأكل | nom
-┃╠عض | bite
-┃╠يلوح بيده | wave
-┃╠غمزة | wink
-┃╠ضرب | bonk
-┃╠لعق | lick
-┃╠تنمر | bully
-┃╠تقبيل | kiss
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'textpromenu':
-var unicorn = await getBuffer(picak+'.14.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═✪「 الزخرفة 」	        
-┃╠زخرفة  انقلش | styletext
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'convertmenu':
-var unicorn = await getBuffer(picak+'.11.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 التحويلات 」	        
-┃╠ملصق |ستيكر | س
-┃╠لصورة
-┃╠لفيديو
-┃╠لمقطع.صوتي
-┃╠لصوتية
-┃╠لجيف
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'databasemenu':
-var unicorn = await getBuffer(picak+'.12.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔═══✪「 البيانات 」	        
-┃╠اضافة.رسالة
-┃╠قائمة.الرسائل
-┃╠حذف.رسالة
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'anon':
-var unicorn = await getBuffer(picak+'.17.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 الاستمارات 」	        
-    「 القوانين 」
-    「 الترحيب 」
-    「 اعلان ترقية | اعلان تخفيض」
-    「 استمارة | الاستمارة 」
-    「 قائمة الالقاب 」
-    「 سؤال 」
-    「 امونق اس 」
-    「 فعالية التصاميم 」
-    「 فعالية الجرس 」
-    「 فعالية الديث نوت 」
-    「 فعالية الصور 」
-    「 فعالية الكراسي 」
-    「 فعالية الفرق 」
-    「 فعالية القلوب 」
-    「 فعالية مين الاسرع 」
-    「 فعالية المارد 」
-    「 مسابقة 」
-    「 مسابقة القنابل 」
-    「 بطاقة تغيير صورة الجروب 」
-    「 بطاقة تجميع صور 」
-    「 بطاقة تغيير القب 」
-    「 بطاقة حذف انذار 」
-    「 بطاقة سرقة القب 」
-    「 بطاقة سخرية 」
-    「 بطاقة طرد 」
-    「 بطاقة تطهير طرد 」
-    「 بطاقة مشرف 」
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'islamicmenu':
-var unicorn = await getBuffer(picak+'.15.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 القرآن الكريم 」	        
-┃╠القرآن | juzamma pdf
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'voicechangermenu':
-var unicorn = await getBuffer(picak+'.13.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 مغير الاصوات 」	        
-┃╠سريع | fast
-┃╠بطيء | slow
-┃╠سمين | fat
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'horoscopemenu':
-var unicorn = await getBuffer(picak+'.16.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
-┏━「 ${botname} 」━━⭓ 
-┃╔══✪「 الأضافات 」	        
-┃╠شاي | قهوة
-┃╚═════════════✪
-┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-case 'thanksto': case 'tqto': case 'tqtt':
-var unicorn = await getBuffer(picak+'.18.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `مملكة غولد كانت تضم حوالي 50 نقابة كانت من افضل الممالك قديما بقيادة الامبراطور توشيرو والنائب ساتومي من نأحية التحديات والمسابقات كانت المملكة من الاوائل وقتها لكن في مرة من الايام تعطل هاتف الامبراطور توشيرو واختفى حوالي سنتين وعندما عاد  اختفت المملكة وكل شيء  والان هو يحاول ان يحيئ مملكته من البداية التي لاتضم اي نقابة حاليا وخطوته الاولى كانت بأن يعمل بوت وهو انا كيف تشوفوني ؟ ههه مو مشكلة المهم توشيرو  يقول اذا بدكم تنضمون معنا اضغطو ع زر رابط الاستقبال.`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
-break
-            default:
-                if (budy.startsWith('=>')) {
-                    if (!isCreator) return reply(mess.owner)
-                    function Return(sul) {
-                        sat = JSON.stringify(sul, null, 2)
-                        bang = util.format(sat)
-                            if (sat == undefined) {
-                                bang = util.format(sul)
-                            }
-                            reply(bang)
-                    }
-                    try {
-                        reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
-                    } catch (e) {
-                        reply(String(e))
-                    }
-                }
-
-                if (budy.startsWith('>')) {
-                    if (!isCreator) return reply(mess.owner)
-                    try {
-                        let evaled = await eval(budy.slice(2))
-                        if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
-                        await reply(evaled)
-                    } catch (err) {
-                        await reply(String(err))
-                    }
-                }
-
-                if (budy.startsWith('$')) {
-                    if (!isCreator) return reply(mess.owner)
-                    exec(budy.slice(2), (err, stdout) => {
-                        if(err) return reply(err)
-                        if (stdout) return reply(stdout)
-                    })
-                }
-			
-		if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
-                    this.anonymous = this.anonymous ? this.anonymous : {}
-                    let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
-                    if (room) {
-                        if (/^.*(next|leave|start)/.test(m.text)) return
-                        if (['.next', '.leave', '.stop', '.start', 'Cari Partner', 'Keluar', 'Lanjut', 'Stop'].includes(m.text)) return
-                        let other = [room.a, room.b].find(user => user !== m.sender)
-                        m.copyNForward(other, true, m.quoted && m.quoted.fromMe ? {
-                            contextInfo: {
-                                ...m.msg.contextInfo,
-                                forwardingScore: 0,
-                                isForwarded: true,
-                                participant: other
-                            }
-                        } : {})
-                    }
-                    return !0
-                }
-			
-		if (isCmd && budy.toLowerCase() != undefined) {
-		    if (m.chat.endsWith('broadcast')) return
-		    if (m.isBaileys) return
-		    let msgs = global.db.data.database
-		    if (!(budy.toLowerCase() in msgs)) return
-		    GojoMdNx.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
-		}
-        }
-        
-
-    } catch (err) {
-        m.reply(util.format(err))
-    }
-}
-
-
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-	fs.unwatchFile(file)
-	console.log(chalk.redBright(`Update ${__filename}`))
-	delete require.cache[file]
-	require(file)
-})
+                let [nama1
