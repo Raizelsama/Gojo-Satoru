@@ -29,20 +29,20 @@ global.ig = 'https://github.com/nexusNw'
 global.region = 'India, South India, Kerala'
 global.sc = 'https://github.com/nexusNw/Gojo-Satoru'
 global.myweb = 'https://youtube.com/channel/UCqoUjPvDdb0kjXNYdvPPpHQ'
-global.packname = 'RAIZEL_SAMA'
+global.packname = 'Gojo-Satoru'
 global.author = '✦〘𝐁.𝐎.𝐓_⌠🔱⌡_𝐑𝐀𝐈𝐙𝐄𝐋〙✦'
 global.sessionName = 'session'
-global.prefa = ['','!','.','🐦','🐤','🗿']
+global.prefa = ['','!','.','🐦,'😎','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: 'تـم ✓',
+    success: 'تم ✓',
     admin: '◢آنت مش آدمـن يـورع🐦◣!',
-    botAdmin: '◢آرفع آلبــوت آدمـن يسـطـآ◣!',
-    owner: 'This Feature Is Only For Owner!',
-    group: 'هذه الميزات تعمل بالقروبات فقط !',
-    private: 'لا تعمل هذه الميزات الا بالدردشات الخاصه!',
-    bot: 'This Feature Is Only For Bot',
-    wait: 'يرجى الإنتظـــار',
+    botAdmin: '◢آرفع آلبــوت آدمـن يـسطـآ◣!',
+    owner: 'هذه الاوامر للمالك فقط!',
+    group: 'هذه الخدمات تعمل بالقروبات فقط!',
+    private: 'هذه الخدمات تعمل بالخاص فقط!',
+    bot: 'هذه الخدمات للمالك فقط',
+    wait: 'يــرجى الإنتظـار...',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 1000 Hours',
 }
