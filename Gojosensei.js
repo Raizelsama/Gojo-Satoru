@@ -1146,7 +1146,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'زوجنيزوجني : {
+            case 'زوجني : {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
@@ -1387,19 +1387,19 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 		await GojoMdNx.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'block': {
+        case 'حظر': {
 		if (!isCreator) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-        case 'unblock': {
+        case 'الغاء الحظر': {
 		if (!isCreator) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
-	    case 'setname': case 'setgcname': case 'setsubject': {
+	    case 'تسمية': case 'setgcname': case 'setsubject': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
@@ -1407,7 +1407,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 await GojoMdNx.groupUpdateSubject(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-          case 'setdesc': case 'setdesk': {
+          case 'تغيير': case 'setdesk': {
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isBotAdmins) return replay(`${mess.botAdmin}`)
                 if (!isAdmins) replay(`${mess.admin}`)
@@ -1641,8 +1641,8 @@ break
                     await GojoMdNx.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Successful Opening The Group`)).catch((err) => reply(jsonformat(err)))
                 } else {
                 let buttons = [
-                        { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
-                        { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
+                        { buttonId: 'فتح القروب', buttonText: { displayText: 'Open' }, type: 1 },
+                        { buttonId: 'غلق القروب', buttonText: { displayText: 'Close' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, `Group Mode`, GojoMdNx.user.name, m)
 
@@ -2366,7 +2366,7 @@ break
                 anu = await wallpaper(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
 		let buttons = [
-                    {buttonId: `wallpaper ${text}`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
+                    {buttonId: `wallpaper ${text}`, buttonText: {displayText: '➡️الصورة التالية➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: result.image[0] },
@@ -2384,7 +2384,7 @@ break
                 anu = await wikimedia(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
-                    {buttonId: `wikimedia ${text}`, buttonText: {displayText: '➡️Next Image➡️'}, type: 1}
+                    {buttonId: `wikimedia ${text}`, buttonText: {displayText: '➡️الصورة التالية➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: result.image },
@@ -2401,7 +2401,7 @@ break
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
-                    {buttonId: `quotesanime`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
+                    {buttonId: `quotesanime`, buttonText: {displayText: '➡️التـــالي➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
@@ -2415,7 +2415,7 @@ break
 	        case 'motivasi': case 'motivationalquote': case 'bucinquote': case 'katasenja': case 'puisi': {
                 let anu = await fetchJson(api('zenz', '/api/'+command, {}, 'apikey'))
                 let buttons = [
-                    {buttonId: `motivasi`, buttonText: {displayText: '➡️Next➡️'}, type: 1}
+                    {buttonId: `motivasi`, buttonText: {displayText: '➡️التـالي➡️'}, type: 1}
                 ]
                 let buttonMessage = {
                     text: anu.result.message,
